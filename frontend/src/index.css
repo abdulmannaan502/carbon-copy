@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "Cascadia Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Brand: deep clinical crimson, used sparingly for identity and focus. */
+  --color-brand-50: #fdf3f4;
+  --color-brand-100: #fbe5e7;
+  --color-brand-200: #f5c4c9;
+  --color-brand-500: #c53643;
+  --color-brand-600: #a8202e;
+  --color-brand-700: #8b1824;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+}
